@@ -1,0 +1,8 @@
+{
+    "host": "<host-name>",
+    "user": "<user-name>",
+    "password": "<password>",
+    "database": "<database-name>",
+    "ssl_ca_path": "<path-to-file>",
+    "openai_api_key": "<openai-api-key>"
+}
