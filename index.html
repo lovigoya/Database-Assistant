@@ -1,0 +1,182 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <meta charset="UTF-8"> 
+        <title>Database Assistant using LangChain and Large Language Models</title> 
+        <style> body { font-family: Arial, sans-serif; background-color: #ECECEC; margin: 20px; }
+            h1, h2 {
+        color: #00407d;
+    }
+    .two-column-container {
+        display: flex;
+        width: 100%;
+    }
+
+    .image-column {
+        flex: 1;
+    }
+
+    .styled-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+    .styled-list li {
+        position: relative;
+        padding-left: 30px;
+        margin-bottom: 15px;
+    }
+
+    .styled-list li:before {
+        content: "\2022";
+        position: absolute;
+        left: 0;
+        top: 4px;
+        font-size: 20px;
+    }
+
+    .styled-list li:last-child {
+        margin-bottom: 0;
+    }
+    .bullet-points-column {
+        flex: 1;
+        padding: 20px;
+    }
+
+    ul {
+        list-style-type: disc;
+        padding-left: 20px;
+    }
+
+    p {
+        line-height: 1.5;
+    }
+    
+    .card {
+        background-color: #fff;
+        padding: 20px; 
+        border: 1px solid #bed7eb;
+        border-radius: 10px;
+        box-shadow: 2px 2px 10px #bed7eb;
+        margin-bottom: 20px;
+    }
+    
+    .card h2 {
+        color: #00407d;
+        margin-top: 0;
+    }
+    
+    table {
+        background-color: #f5fafa;
+        border-collapse: collapse;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    th, td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #c2d6e9;
+    }
+    
+    tr:hover {
+        background-color: #f0f8ff;
+    }
+    
+    pre {
+        background-color: #f5fafa;
+        padding: 10px;
+        border-radius: 5px;
+        color: #00407d;
+    }
+    
+    ol {
+        padding-left: 20px;
+    }
+    
+    a {
+        color: #005db2;
+        text-decoration: none;
+    }.image-container {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    .styled-image {
+      max-width: 100%;
+      height: auto;
+      border: 3px solid #00407d;
+      border-radius: 10px;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    
+    a:hover {
+        text-decoration: underline;
+    }
+</style>
+    </head> <body> 
+        <div style="padding-left: 10%; padding-right: 10%; padding-top: 0%; padding-bottom: 5%;">
+        <h1>Database Assistant using LangChain [<u><a href="https://github.com/lovigoya/Sentence-Embeddings-for-Question-Similarity" style="font-size: 25px; color: blue;">link</a></u>]</h1>
+        <div class="card">
+            <h2>Project Description</h2>
+        
+            <p>The Database Assistant project introduces a transformative approach to database interactions. Through an advanced chat interface, users can seamlessly convert their natural language queries into executable SQL commands. This innovation extends further by automatically executing these commands behind the scenes and presenting users with the corresponding records from the database. By harnessing the capabilities of LangChain and Large Language Models, this project offers an exceptionally user-friendly and intuitive solution for querying databases.</p>
+            <img src="" />
+            <div class="image-container">
+                <img src="artifacts/chat_UI.png" alt="Stylish Image" class="styled-image">
+              </div>
+        </div>
+        
+        <div class="card">
+            <h2>Features</h2>
+        
+            <p><b>Seamless NL to SQL Conversion</b>: The core feature of this project is its ability to convert natural language queries into SQL commands. Users can simply type their questions or requests in plain English, and the system will generate the corresponding SQL scripts and execute it.</p>
+            <p><b>Gradio-Powered Chat Interface</b>: To provide an interactive and engaging user experience, we have integrated Gradio, a user-friendly library for creating web interfaces. The chat interface allows users to input their queries and instantly receive the corresponding SQL query execution output.</p>
+            <p><b>Microsoft Azure Integration</b>: This project seamlessly connects the chat interface to a SQL database using Microsoft Azure services. Various tables are set up within the Azure environment to efficiently store and manage data.</p>
+            <p><b>Efficient Data Management</b>: The Azure-based setup ensures efficient data management, allowing users to store, retrieve, and manipulate data seamlessly through the chat interface.</p>
+            <p><b>LangChain Communication</b>: In the backend, LangChain plays a crucial role in facilitating communication between the chat interface and the database. It acts as the bridge that processes user inputs, interacts with the database schema, and generates SQL scripts based on the context.</p>
+        </div>
+        
+        <div class="card">
+            <h2>Getting Started</h2>
+        
+            <p>Follow these steps to set up and run the database assistant on your local machine:</p>
+        
+            <ol class="styled-list">
+                <li>Begin by cloning this repository to your local machine using the following command:</li>
+                
+                    <pre>git clone https://github.com/lovigoya/Database-Assistant.git</pre>
+                
+                <li>Navigate to the project directory and install the required dependencies by running:</li>
+                <pre>pip install -r requirements.txt</pre>
+                
+                <li>Set up your Microsoft Azure account and configure the database settings as specified in the <b>backend/config.json</b> file.</li>
+                
+                <li>Launch the chat interface by running the following command:</li>
+                <pre>cd /frontend</pre>
+                <pre>python app.py</pre>
+                <li>Open your web browser and navigate to <b>http://localhost:7860</b> to access the database assistant. Start typing your natural language queries and witness the magic of instant SQL conversion!</li>
+            </ol>
+        </div>
+
+        <div class="card">
+            <h2>Future Enhancements</h2>
+            This project lays the foundation for a host of potential enhancements and extensions:
+
+            <p><b>Multi-database Support:</b> Extend the project to support a variety of database systems, allowing users to interact with different databases seamlessly.</p>
+            <p><b>Query Optimization:</b> Implement query optimization techniques to enhance the performance of generated SQL scripts.</p>
+            <p><b>User Authentication:</b> Integrate user authentication and role-based access control for secure and personalized interactions.</p>
+            <p><b>Advanced Language Models:</b> Experiment with even more advanced language models to improve the accuracy and naturalness of the NL to SQL conversion.</p>
+
+        </div>
+
+        <div class="card">
+            <h2>Contributions</h2>
+            Contributions to this project are welcome and encouraged! Whether you're interested in adding new features, fixing bugs, or improving documentation, your contributions can make a meaningful impact.
+
+            To contribute, simply fork this repository, create a new branch for your work, make your changes, and submit a pull request. Be sure to follow our contribution guidelines and code of conduct.
+        </div>
+    </div>
+</div>
+    </body> </html> 
